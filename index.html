@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="'body">
+    <!-- 宿主文件 -->
+    <div  id="app" >
+        {{message}}
+        <h2>
+            {{school.name}}
+            {{school.mobile}}
+        </h2>
+        <ul>
+            <li>{{campus[0]}}</li>
+            <li>{{campus[1]}}</li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        //1.创建vue实例
+      const app = new Vue({
+            el:'#app',
+            // el:'.app',
+            // el:"div",
+            // el:"#body",
+            data:{
+                message:'可以选择其他的双标签，但不能使用html和body',
+                school:{
+                    name:"尹燎",
+                    mobile:"19158831346"
+                },
+                campus:["西南交通大学","武汉理工大学"]
+        }
+    })
+    </script>
+</body>
+</html>
